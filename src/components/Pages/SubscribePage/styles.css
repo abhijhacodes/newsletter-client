@@ -79,6 +79,13 @@ u {
   font-size: large;
   width: 25rem;
   margin-bottom: 1rem;
+  background-color: var(--text-color);
+  outline: none;
+  border: none;
+}
+
+.email__input:focus {
+  border: 2px solid var(--success-color);
 }
 
 @media screen and (max-width: 600px) {

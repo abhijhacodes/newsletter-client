@@ -5,6 +5,7 @@ export const Button: React.FC<Props> = ({
   children,
   onClick = () => console.log("button clicked"),
   isLoading,
+  loadingText,
   isDisabled,
   type = "button",
 }): JSX.Element => {
@@ -16,7 +17,14 @@ export const Button: React.FC<Props> = ({
       }`}
       type={type}
     >
-      {children}
+      {isLoading ? (
+        <>
+          {loadingText}
+          <span className="spinner"></span>
+        </>
+      ) : (
+        children
+      )}
     </button>
   );
 };

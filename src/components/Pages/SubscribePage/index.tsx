@@ -31,7 +31,7 @@ export const SubscribePage: React.FC = (): JSX.Element => {
               className="email__input"
               required
             />
-            <Button isLoading={true} isDisabled={false} type="submit">
+            <Button isLoading={false} type="submit" loadingText="Subscribing">
               Subscribe now
             </Button>
           </form>
