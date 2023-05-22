@@ -5,7 +5,7 @@ import {
   PublishPage,
   SubscribePage,
   UnsubscribePage,
-} from "../index";
+} from "../Pages";
 
 export const App: React.FC = (): JSX.Element => {
   return (

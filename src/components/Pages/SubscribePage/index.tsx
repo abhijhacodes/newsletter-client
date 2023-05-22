@@ -1,7 +1,12 @@
+import { Button } from "../../UI";
 import NewsLetterIllustration from "../../assets/newsletter.svg";
 import "./styles.css";
 
 export const SubscribePage: React.FC = (): JSX.Element => {
+  const subscribeToNewsletter = () => {
+    //
+  };
+
   return (
     <main>
       <div className="hero-section">
@@ -17,6 +22,7 @@ export const SubscribePage: React.FC = (): JSX.Element => {
       </div>
       <div className="cta-section">
         <input type="text" placeholder="Enter email" />
+        <Button onClick={subscribeToNewsletter}>Subscribe now</Button>
       </div>
     </main>
   );
