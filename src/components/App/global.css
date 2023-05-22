@@ -15,3 +15,37 @@
 body {
   font-family: "Source Code Pro", monospace;
 }
+
+.toast-notification {
+  font-family: sans-serif;
+}
+
+.illustration {
+  height: 20rem;
+  width: 20rem;
+}
+
+.hero__text {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .illustration {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .hero__text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

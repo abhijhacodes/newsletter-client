@@ -3,7 +3,7 @@ import "./styles.css";
 
 export const Button: React.FC<Props> = ({
   children,
-  onClick = () => console.log("button clicked"),
+  onClick,
   isLoading,
   loadingText,
   isDisabled,

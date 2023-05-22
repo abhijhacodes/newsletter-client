@@ -14,7 +14,7 @@ export const App: React.FC = (): JSX.Element => {
       <Routes>
         <Route path="/" element={<SubscribePage />} />
         <Route
-          path="/unsubscribe/:subscription_id"
+          path="/unsubscribe/:subscriptionId"
           element={<UnsubscribePage />}
         />
         <Route path="/admin/login" element={<AdminLoginPage />} />

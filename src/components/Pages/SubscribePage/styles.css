@@ -5,11 +5,6 @@ main {
   display: flex;
 }
 
-.illustration {
-  height: 20rem;
-  width: 20rem;
-}
-
 .left__panel,
 .right__panel {
   height: 80%;
@@ -33,10 +28,6 @@ main {
   gap: 1rem;
 }
 
-.hero__text {
-  font-size: 1.5rem;
-}
-
 u {
   color: var(--primary-color);
 }
@@ -55,16 +46,6 @@ u {
   .right__panel {
     align-items: flex-start;
     justify-content: center;
-  }
-
-  .illustration {
-    height: 15rem;
-    width: 15rem;
-  }
-
-  .hero__text {
-    font-size: 1.3rem;
-    text-align: center;
   }
 
   .hero__section,
