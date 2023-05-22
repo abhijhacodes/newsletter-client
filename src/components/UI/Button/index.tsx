@@ -1,10 +1,12 @@
 import { Props } from "./types";
+import "./styles.css";
 
 export const Button: React.FC<Props> = ({
   children,
-  onClick,
+  onClick = () => console.log("button clicked"),
   isLoading,
   isDisabled,
+  type = "button",
 }): JSX.Element => {
   return (
     <button
@@ -12,6 +14,7 @@ export const Button: React.FC<Props> = ({
       className={`${isLoading ? "loading" : ""} ${
         isDisabled ? "disabled" : ""
       }`}
+      type={type}
     >
       {children}
     </button>

@@ -6,6 +6,7 @@ import {
   SubscribePage,
   UnsubscribePage,
 } from "../Pages";
+import "./global.css";
 
 export const App: React.FC = (): JSX.Element => {
   return (

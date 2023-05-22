@@ -1,4 +1,27 @@
+button {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  width: 25rem;
+}
+
 .disabled {
   cursor: not-allowed;
   pointer-events: none;
+  background-color: var(--disabled-color);
+}
+
+@media screen and (max-width: 600px) {
+  button {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  button {
+    width: 60vw;
+  }
 }

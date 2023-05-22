@@ -1,4 +1,94 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+  display: flex;
+}
+
 .illustration {
   height: 20rem;
   width: 20rem;
+}
+
+.left__panel,
+.right__panel {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.left__panel {
+  padding: 2rem 4rem 2rem 8rem;
+}
+
+.right__panel {
+  padding: 2rem 4rem;
+}
+
+.hero__section,
+.cta__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero__text {
+  font-size: 1.5rem;
+}
+
+u {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left__panel,
+  .right__panel {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .right__panel {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .illustration {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .hero__text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .hero__section,
+  .cta__section {
+    align-items: center;
+  }
+}
+
+.email__input {
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: large;
+  width: 25rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .email__input {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .email__input {
+    width: 60vw;
+  }
 }

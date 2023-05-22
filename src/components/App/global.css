@@ -1,0 +1,16 @@
+:root {
+  --background-color: #b0c3ff;
+  --primary-color: #3658c1;
+  --text-color: #ededed;
+  --disabled-color: #758283;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+}
