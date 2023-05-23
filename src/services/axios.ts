@@ -7,10 +7,20 @@ export const axiosPublicInstance = axios.create({
   },
 });
 
-export const axiosPrivateInstance = axios.create({
+export const axiosLoginInstance = axios.create({
   baseURL: `${import.meta.env.VITE_NEWSLETTER_API_URL}/api`,
   headers: {
     accept: "application/json",
     "Content-Type": "application/x-www-form-urlencoded",
   },
 });
+
+export const axiosPrivateInstance = (accessToken: string) =>
+  axios.create({
+    baseURL: `${import.meta.env.VITE_NEWSLETTER_API_URL}/api`,
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });

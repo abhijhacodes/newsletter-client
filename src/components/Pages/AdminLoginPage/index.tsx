@@ -27,7 +27,7 @@ export const AdminLoginPage: React.FC = (): JSX.Element => {
     const res = await AdminServices.login(username, password);
     if (res.success) {
       toast.success(res.message);
-      setCookies("access_token", res.access_token, { path: "/" });
+      setCookies("access_token", res.access_token, { path: "/", maxAge: 7200 });
       goToPublishPage();
     } else {
       toast.error(res.message);
@@ -67,6 +67,7 @@ export const AdminLoginPage: React.FC = (): JSX.Element => {
             type="submit"
             isLoading={isLoading}
             isDisabled={!username.length || !password.length}
+            loadingText="Loggin in"
           >
             Login
           </Button>
