@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 import { Button } from "../../UI";
 import "./styles.css";
 import NewsLetterIllustration from "../../../assets/newsletter.svg";
-import { NewsletterServices } from "../../../apiCalls/subscribe";
+import { SubscriptionServices } from "../../../services/subscription";
 
 export const SubscribePage: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState<string>("");
@@ -13,7 +13,7 @@ export const SubscribePage: React.FC = (): JSX.Element => {
   const subscribeCallback = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
-    const res = await NewsletterServices.subscribe(email);
+    const res = await SubscriptionServices.subscribe(email);
 
     if (res.success) {
       toast.success(res.message);
@@ -45,7 +45,7 @@ export const SubscribePage: React.FC = (): JSX.Element => {
             <input
               type="email"
               placeholder="Enter email"
-              className="email__input"
+              className="input__field"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}

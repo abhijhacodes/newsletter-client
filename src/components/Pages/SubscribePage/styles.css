@@ -53,30 +53,3 @@ u {
     align-items: center;
   }
 }
-
-.email__input {
-  padding: 0.6rem 1rem;
-  text-align: center;
-  font-size: large;
-  width: 25rem;
-  margin-bottom: 1rem;
-  background-color: var(--text-color);
-  outline: none;
-  border: none;
-}
-
-.email__input:focus {
-  border: 2px solid var(--success-color);
-}
-
-@media screen and (max-width: 600px) {
-  .email__input {
-    width: 80vw;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  .email__input {
-    width: 60vw;
-  }
-}

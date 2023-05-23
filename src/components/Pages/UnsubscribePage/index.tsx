@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { Button } from "../../UI";
 import "./styles.css";
-import { NewsletterServices } from "../../../apiCalls/subscribe";
+import { SubscriptionServices } from "../../../services/subscription";
 import ByeIllustration from "../../../assets/bye.svg";
 import ErrorIllustration from "../../../assets/error.svg";
 
@@ -19,7 +19,7 @@ export const UnsubscribePage = (): JSX.Element => {
 
   const unSubscribeFromNewsLetter = async () => {
     setIsLoading(true);
-    const res = await NewsletterServices.unsubscribe(subscriptionId ?? "");
+    const res = await SubscriptionServices.unsubscribe(subscriptionId ?? "");
     setMessage(res.message);
     setIsError(!res.success);
     setIsLoading(false);

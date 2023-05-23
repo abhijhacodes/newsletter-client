@@ -1,10 +1,13 @@
-import { axiosInstance } from "./axios";
+import { axiosPublicInstance } from "./axios";
 
-export const NewsletterServices = {
+export const SubscriptionServices = {
   subscribe: async (email: string) => {
     try {
       const reqBody = { email };
-      const res = await axiosInstance.post("/subscriptions/subscribe", reqBody);
+      const res = await axiosPublicInstance.post(
+        "/subscriptions/subscribe",
+        reqBody
+      );
       const data = JSON.parse(JSON.stringify(res.data));
 
       if (data.status_code === 200) {
@@ -18,7 +21,7 @@ export const NewsletterServices = {
 
   unsubscribe: async (subscriptionId: string) => {
     try {
-      const res = await axiosInstance.delete(
+      const res = await axiosPublicInstance.delete(
         `/subscriptions/unsubscribe/${subscriptionId}`
       );
       const data = JSON.parse(JSON.stringify(res.data));
