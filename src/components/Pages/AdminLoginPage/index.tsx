@@ -67,7 +67,7 @@ export const AdminLoginPage: React.FC = (): JSX.Element => {
             type="submit"
             isLoading={isLoading}
             isDisabled={!username.length || !password.length}
-            loadingText="Loggin in"
+            loadingText="Logging in"
           >
             Login
           </Button>
